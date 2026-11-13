@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Your Cart | ByteCart{% endblock %}
+
+{% block content %}
+<section class="page-heading compact-heading">
+    <div><p class="eyebrow">Your selection</p><h1>Your cart</h1></div>
+</section>
+{% if cart %}
+    <div class="cart-layout">
+        <div class="cart-items">
+            {% for item in cart %}
+                <article class="cart-row">
+                    <div class="cart-product">
+                        <h2><a href="{% url 'product_detail' item.product.pk %}">{{ item.product.name }}</a></h2>
+                        <p class="muted">${{ item.product.price }} each</p>
+                    </div>
+                    <form class="quantity-form" method="post" action="{% url 'cart_update' item.product.pk %}">
+                        {% csrf_token %}
+                        <label class="visually-hidden" for="quantity-{{ item.product.pk }}">Quantity for {{ item.product.name }}</label>
+                        <input id="quantity-{{ item.product.pk }}" name="quantity" type="number" min="0" max="{{ item.product.stock }}" value="{{ item.quantity }}" required>
+                        <button class="button button-small button-outline" type="submit">Update</button>
+                    </form>
+                    <strong class="line-total">${{ item.subtotal }}</strong>
+                    <form method="post" action="{% url 'cart_remove' item.product.pk %}">
+                        {% csrf_token %}
+                        <button class="remove-button" type="submit" aria-label="Remove {{ item.product.name }}">Remove</button>
+                    </form>
+                </article>
+            {% endfor %}
+        </div>
+        <aside class="order-summary">
+            <h2>Order summary</h2>
+            <p><span>Subtotal</span><strong>${{ cart.total }}</strong></p>
+            <p class="muted">Shipping and taxes are calculated at checkout.</p>
+            <a class="button button-dark button-wide" href="{% url 'checkout' %}">Continue to checkout</a>
+            <a class="text-link" href="{% url 'home' %}">Continue shopping</a>
+        </aside>
+    </div>
+{% else %}
+    <div class="empty-state">
+        <h2>Your cart is empty</h2>
+        <p>Good things are waiting to be found.</p>
+        <a class="button button-dark" href="{% url 'home' %}">Browse products</a>
+    </div>
+{% endif %}
+{% endblock %}

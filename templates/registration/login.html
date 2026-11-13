@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Login | ByteCart{% endblock %}
+
+{% block content %}
+<section class="auth-wrap">
+    <div class="auth-heading"><p class="eyebrow">Welcome back</p><h1>Log in</h1><p class="muted">Sign in to continue to your account.</p></div>
+    <form class="form-panel" method="post">
+        {% csrf_token %}
+        {% if form.non_field_errors %}<div class="form-errors">{{ form.non_field_errors }}</div>{% endif %}
+        {% for field in form %}
+            <div class="form-field">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}
+            </div>
+        {% endfor %}
+        {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+        <button class="button button-dark button-wide" type="submit">Log in</button>
+    </form>
+    <p class="auth-footnote">New to ByteCart? <a href="{% url 'signup' %}">Create an account</a></p>
+</section>
+{% endblock %}

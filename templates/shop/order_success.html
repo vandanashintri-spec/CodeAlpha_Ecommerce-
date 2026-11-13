@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Order Confirmed | ByteCart{% endblock %}
+
+{% block content %}
+<section class="confirmation">
+    <p class="eyebrow">Order placed</p>
+    <h1>Thank you, {{ order.full_name }}.</h1>
+    <p class="confirmation-intro">Your order <strong>#{{ order.pk }}</strong> is confirmed. We will prepare it for delivery.</p>
+    <div class="order-summary confirmation-summary">
+        <h2>Order details</h2>
+        {% for item in order.items.all %}
+            <p><span>{{ item.product.name }} <small>× {{ item.quantity }}</small></span><strong>${{ item.price|floatformat:2 }}</strong></p>
+        {% endfor %}
+        <p class="summary-total"><span>Total</span><strong>${{ order.total }}</strong></p>
+        <p><span>Payment</span><strong>{{ order.get_payment_method_display }}</strong></p>
+        <p><span>Payment status</span><strong>{{ order.get_payment_status_display }}</strong></p>
+        <p><span>Status</span><strong>{{ order.get_status_display }}</strong></p>
+    </div>
+    <a class="button button-dark" href="{% url 'home' %}">Back to the shop</a>
+</section>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}ByteCart | Shop{% endblock %}
+
+{% block content %}
+<section class="page-heading">
+    <div>
+        <p class="eyebrow">Thoughtful finds, delivered</p>
+        <h1>Find your next favorite.</h1>
+        <p class="muted">Browse the collection and discover something useful.</p>
+    </div>
+</section>
+
+<form class="filter-bar" method="get" action="{% url 'home' %}">
+    <label class="search-field">
+        <span class="visually-hidden">Search products</span>
+        <input type="search" name="q" value="{{ query }}" placeholder="Search products...">
+    </label>
+    <label>
+        <span class="visually-hidden">Category</span>
+        <select name="category">
+            <option value="">All categories</option>
+            {% for value, label in categories %}
+                <option value="{{ value }}" {% if selected_category == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+    </label>
+    <button class="button button-dark" type="submit">Search</button>
+    {% if query or selected_category %}<a class="text-link" href="{% url 'home' %}">Clear</a>{% endif %}
+</form>
+
+<section class="product-grid" aria-label="Products">
+    {% for product in products %}
+        <article class="product-card">
+            <a class="product-image" href="{% url 'product_detail' product.pk %}">
+                {% if product.image_url %}
+                    <img src="{{ product.image_url }}" alt="{{ product.name }}" loading="lazy">
+                {% else %}
+                    <span class="image-placeholder" aria-hidden="true">{{ product.name|slice:":1" }}</span>
+                {% endif %}
+            </a>
+            <div class="product-info">
+                <p class="eyebrow">{{ product.get_category_display }}</p>
+                <h2><a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a></h2>
+                <div class="product-meta">
+                    <strong>${{ product.price }}</strong>
+                    {% if product.stock > 0 %}<span>{{ product.stock }} in stock</span>{% else %}<span class="out-of-stock">Sold out</span>{% endif %}
+                </div>
+                <a class="text-link" href="{% url 'product_detail' product.pk %}">View details <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </article>
+    {% empty %}
+        <div class="empty-state">
+            <h2>No products found</h2>
+            <p>Try a different search or category.</p>
+            <a class="button button-outline" href="{% url 'home' %}">Browse all products</a>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}

@@ -1,0 +1,652 @@
+[
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "name": "wireless headphone",
+    "description": "comfortable wireless headphones with clear sound",
+    "price": "5000.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80",
+    "stock": 9,
+    "created_at": "2026-11-12T08:55:03.505Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "name": "Bluetooth Speaker",
+    "description": "Compact wireless speaker with clear everyday sound.",
+    "price": "79.99",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=900&q=80",
+    "stock": 15,
+    "created_at": "2026-11-12T08:59:43.036Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "name": "Canvas Tote Bag",
+    "description": "Reusable cotton tote for daily errands.",
+    "price": "22.50",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80",
+    "stock": 20,
+    "created_at": "2026-11-12T08:59:43.045Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "name": "Modern Desk Lamp",
+    "description": "Adjustable task lamp for a calmer workspace.",
+    "price": "34.00",
+    "category": "Home",
+    "image_url": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80",
+    "stock": 12,
+    "created_at": "2026-11-12T08:59:43.050Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "name": "Creative Writing Journal",
+    "description": "A lined notebook for notes, plans, and ideas.",
+    "price": "14.99",
+    "category": "Books",
+    "image_url": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=900&q=80",
+    "stock": 25,
+    "created_at": "2026-11-12T08:59:43.055Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "name": "Floral Midi Dress",
+    "description": "A lightweight floral midi dress for everyday outings.",
+    "price": "54.99",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80",
+    "stock": 12,
+    "created_at": "2026-11-12T09:00:53.712Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "name": "Linen Shirt Dress",
+    "description": "Relaxed-fit linen shirt dress with a waist tie.",
+    "price": "62.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80",
+    "stock": 8,
+    "created_at": "2026-11-12T09:00:53.718Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "name": "Classic Black Wrap Dress",
+    "description": "A versatile wrap dress for work or an evening out.",
+    "price": "68.50",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=900&q=80",
+    "stock": 7,
+    "created_at": "2026-11-12T09:00:53.722Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "name": "Everyday Cotton T-Shirt",
+    "description": "Soft cotton crew-neck tee for daily wear.",
+    "price": "18.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+    "stock": 25,
+    "created_at": "2026-11-12T09:00:53.728Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "name": "Denim Jacket",
+    "description": "Classic midweight denim jacket with front pockets.",
+    "price": "59.99",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=900&q=80",
+    "stock": 10,
+    "created_at": "2026-11-12T09:00:53.733Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 11,
+  "fields": {
+    "name": "Running Sneakers",
+    "description": "Lightweight cushioned sneakers for everyday movement.",
+    "price": "74.95",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+    "stock": 14,
+    "created_at": "2026-11-12T09:00:53.737Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 12,
+  "fields": {
+    "name": "Crossbody Bag",
+    "description": "Compact crossbody bag with an adjustable strap.",
+    "price": "39.50",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80",
+    "stock": 11,
+    "created_at": "2026-11-12T09:00:53.741Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 13,
+  "fields": {
+    "name": "Wireless Earbuds",
+    "description": "Bluetooth earbuds with a pocket charging case.",
+    "price": "49.99",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=900&q=80",
+    "stock": 18,
+    "created_at": "2026-11-12T09:00:53.745Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 14,
+  "fields": {
+    "name": "Smart Watch",
+    "description": "Fitness tracking and notifications in a simple smartwatch.",
+    "price": "119.99",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
+    "stock": 9,
+    "created_at": "2026-11-12T09:00:53.748Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 15,
+  "fields": {
+    "name": "Portable Power Bank",
+    "description": "Portable 10000 mAh charger with USB output.",
+    "price": "27.99",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+    "stock": 20,
+    "created_at": "2026-11-12T09:00:53.753Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 16,
+  "fields": {
+    "name": "Ceramic Plant Pot",
+    "description": "Glazed ceramic planter for indoor plants.",
+    "price": "16.50",
+    "category": "Home",
+    "image_url": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=80",
+    "stock": 16,
+    "created_at": "2026-11-12T09:00:53.757Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 17,
+  "fields": {
+    "name": "Cotton Throw Blanket",
+    "description": "Soft woven cotton throw for a sofa or bed.",
+    "price": "42.00",
+    "category": "Home",
+    "image_url": "https://images.unsplash.com/photo-1600369671236-e74521d4b6ad?auto=format&fit=crop&w=900&q=80",
+    "stock": 13,
+    "created_at": "2026-11-12T09:00:53.762Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 18,
+  "fields": {
+    "name": "Everyday Cookbook",
+    "description": "A collection of practical recipes for home cooking.",
+    "price": "24.00",
+    "category": "Books",
+    "image_url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=80",
+    "stock": 10,
+    "created_at": "2026-11-12T09:00:53.766Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 19,
+  "fields": {
+    "name": "Sketchbook Set",
+    "description": "Two blank-page sketchbooks for drawing and notes.",
+    "price": "15.50",
+    "category": "Books",
+    "image_url": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80",
+    "stock": 22,
+    "created_at": "2026-11-12T09:00:53.769Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 20,
+  "fields": {
+    "name": "Insulated Water Bottle",
+    "description": "Reusable stainless steel bottle for hot or cold drinks.",
+    "price": "22.00",
+    "category": "Other",
+    "image_url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=80",
+    "stock": 19,
+    "created_at": "2026-11-12T09:00:53.774Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 21,
+  "fields": {
+    "name": "Festive Silk Saree",
+    "description": "A festive traditional silk saree with a rich woven finish.",
+    "price": "129.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+    "stock": 8,
+    "created_at": "2026-11-12T09:05:45.064Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 22,
+  "fields": {
+    "name": "Embroidered Anarkali Suit",
+    "description": "A flowing embroidered Anarkali suit for celebrations.",
+    "price": "89.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80",
+    "stock": 9,
+    "created_at": "2026-11-12T09:05:45.075Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 23,
+  "fields": {
+    "name": "Cotton Kurta Set",
+    "description": "A comfortable cotton kurta set for everyday traditional wear.",
+    "price": "54.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80",
+    "stock": 12,
+    "created_at": "2026-11-12T09:05:45.080Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 24,
+  "fields": {
+    "name": "Mens Kurta Pajama",
+    "description": "A classic kurta pajama set for festive and casual occasions.",
+    "price": "59.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1770359993283-a2c2f386584e?auto=format&fit=crop&w=900&q=80",
+    "stock": 10,
+    "created_at": "2026-11-12T09:05:45.086Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 25,
+  "fields": {
+    "name": "Nehru Jacket",
+    "description": "A tailored Nehru-style jacket for traditional occasions.",
+    "price": "69.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1767775498862-d4740ce574ce?auto=format&fit=crop&w=900&q=80",
+    "stock": 7,
+    "created_at": "2026-11-12T09:05:45.092Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 26,
+  "fields": {
+    "name": "Mens Festive Sherwani",
+    "description": "A formal sherwani set for weddings and celebrations.",
+    "price": "179.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1785669430790-6a65f5cc3dd1?auto=format&fit=crop&w=900&q=80",
+    "stock": 5,
+    "created_at": "2026-11-12T09:05:45.097Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 27,
+  "fields": {
+    "name": "5G Smartphone 128GB",
+    "description": "A modern 5G smartphone with a bright display and 128GB storage.",
+    "price": "429.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80",
+    "stock": 14,
+    "created_at": "2026-11-12T09:05:45.103Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 28,
+  "fields": {
+    "name": "14-inch Laptop",
+    "description": "A portable laptop for work, study, and everyday use.",
+    "price": "849.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80",
+    "stock": 8,
+    "created_at": "2026-11-12T09:05:45.109Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 29,
+  "fields": {
+    "name": "10-inch Tablet",
+    "description": "A lightweight tablet for reading, streaming, and browsing.",
+    "price": "279.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=900&q=80",
+    "stock": 11,
+    "created_at": "2026-11-12T09:05:45.113Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 30,
+  "fields": {
+    "name": "Bluetooth Keyboard",
+    "description": "A compact wireless keyboard for laptop and tablet setups.",
+    "price": "39.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80",
+    "stock": 18,
+    "created_at": "2026-11-12T09:05:45.118Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 31,
+  "fields": {
+    "name": "Wireless Mouse",
+    "description": "An ergonomic wireless mouse for work and travel.",
+    "price": "21.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80",
+    "stock": 22,
+    "created_at": "2026-11-12T09:05:45.123Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 32,
+  "fields": {
+    "name": "USB-C Multiport Hub",
+    "description": "A USB-C adapter with extra ports for laptop accessories.",
+    "price": "34.00",
+    "category": "Electronics",
+    "image_url": "https://plus.unsplash.com/premium_photo-1764113096548-11270b5febed?fm=jpg&q=60&w=1200&auto=format",
+    "stock": 16,
+    "created_at": "2026-11-12T09:05:45.127Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 33,
+  "fields": {
+    "name": "Padded Laptop Sleeve",
+    "description": "A padded sleeve to protect a laptop while travelling.",
+    "price": "29.00",
+    "category": "Electronics",
+    "image_url": "https://images.pexels.com/photos/89723/pexels-photo-89723.jpeg?auto=compress&cs=tinysrgb&w=900",
+    "stock": 13,
+    "created_at": "2026-11-12T09:05:45.131Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 34,
+  "fields": {
+    "name": "Protective Phone Case",
+    "description": "A slim protective case for everyday phone use.",
+    "price": "16.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&w=900&q=80",
+    "stock": 25,
+    "created_at": "2026-11-12T09:05:45.136Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 35,
+  "fields": {
+    "name": "Punjabi Jutti Flats",
+    "description": "Red embroidered traditional flats with festive detailing.",
+    "price": "38.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1777980653176-849502631cf6?auto=format&fit=crop&w=900&q=80",
+    "stock": 14,
+    "created_at": "2026-11-12T09:17:02.993Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 36,
+  "fields": {
+    "name": "Red Embroidered Juttis",
+    "description": "Hand-finished red juttis with gold accents.",
+    "price": "42.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1777980652216-68112200e3c8?auto=format&fit=crop&w=900&q=80",
+    "stock": 9,
+    "created_at": "2026-11-12T09:17:03.000Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 37,
+  "fields": {
+    "name": "Womens Ballet Flats",
+    "description": "Classic woven ballet flats for everyday wear.",
+    "price": "34.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1758542988664-49951c5b1999?auto=format&fit=crop&w=900&q=80",
+    "stock": 18,
+    "created_at": "2026-11-12T09:17:03.004Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 38,
+  "fields": {
+    "name": "Mens Brown Leather Loafers",
+    "description": "Brown leather loafers for formal and smart-casual outfits.",
+    "price": "68.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1777987601447-266e128de448?auto=format&fit=crop&w=900&q=80",
+    "stock": 11,
+    "created_at": "2026-11-12T09:17:03.009Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 39,
+  "fields": {
+    "name": "Womens Block Heel Sandals",
+    "description": "Black peep-toe sandals with a comfortable block heel.",
+    "price": "49.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1585488434451-7ee645d0574b?auto=format&fit=crop&w=900&q=80",
+    "stock": 12,
+    "created_at": "2026-11-12T09:17:03.013Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 40,
+  "fields": {
+    "name": "Embroidered Lehenga Set",
+    "description": "A festive maroon lehenga set for special occasions.",
+    "price": "149.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1756483488645-5973a1a92e33?auto=format&fit=crop&w=900&q=80",
+    "stock": 6,
+    "created_at": "2026-11-12T09:17:03.016Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 41,
+  "fields": {
+    "name": "Traditional Dupatta",
+    "description": "A patterned red dupatta to complement traditional outfits.",
+    "price": "29.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1759840279499-f9de9764b2cf?auto=format&fit=crop&w=900&q=80",
+    "stock": 15,
+    "created_at": "2026-11-12T09:17:03.020Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 42,
+  "fields": {
+    "name": "Mens Kurta with Patterned Vest",
+    "description": "A blue kurta paired with a patterned traditional vest.",
+    "price": "72.00",
+    "category": "Fashion",
+    "image_url": "https://images.unsplash.com/photo-1767775498862-d4740ce574ce?auto=format&fit=crop&w=900&q=80",
+    "stock": 8,
+    "created_at": "2026-11-12T09:17:03.024Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 43,
+  "fields": {
+    "name": "Over-Ear Headphones",
+    "description": "Over-ear headphones for music, calls, and gaming.",
+    "price": "64.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1677086813101-496781a0f327?auto=format&fit=crop&w=900&q=80",
+    "stock": 16,
+    "created_at": "2026-11-12T09:17:03.027Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 44,
+  "fields": {
+    "name": "USB-C Cable Set",
+    "description": "A set of USB data and charging cables.",
+    "price": "18.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1573868388390-2739872961e6?auto=format&fit=crop&w=900&q=80",
+    "stock": 30,
+    "created_at": "2026-11-12T09:17:03.031Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 45,
+  "fields": {
+    "name": "5G Smartphone 256GB",
+    "description": "A 5G smartphone with 256GB of storage.",
+    "price": "529.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80",
+    "stock": 10,
+    "created_at": "2026-11-12T09:17:03.035Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 46,
+  "fields": {
+    "name": "14-inch Laptop 16GB",
+    "description": "A portable laptop with 16GB memory for work and study.",
+    "price": "999.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80",
+    "stock": 6,
+    "created_at": "2026-11-12T09:17:03.041Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 47,
+  "fields": {
+    "name": "10-inch Tablet 128GB",
+    "description": "A compact tablet with 128GB storage for reading and streaming.",
+    "price": "319.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=900&q=80",
+    "stock": 9,
+    "created_at": "2026-11-12T09:17:03.045Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 48,
+  "fields": {
+    "name": "Mechanical Keyboard",
+    "description": "A mechanical keyboard for desktop and laptop setups.",
+    "price": "59.00",
+    "category": "Electronics",
+    "image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80",
+    "stock": 14,
+    "created_at": "2026-11-12T09:17:03.051Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 49,
+  "fields": {
+    "name": "Stainless Steel Cookware Set",
+    "description": "A set of stainless steel pots for everyday cooking.",
+    "price": "89.00",
+    "category": "Home",
+    "image_url": "https://images.unsplash.com/photo-1584990347193-6bebebfeaeee?auto=format&fit=crop&w=900&q=80",
+    "stock": 7,
+    "created_at": "2026-11-12T09:17:03.056Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 50,
+  "fields": {
+    "name": "Insulated Bento Lunch Box",
+    "description": "A reusable lunch box for packed meals on the go.",
+    "price": "24.00",
+    "category": "Other",
+    "image_url": "https://images.unsplash.com/photo-1784979472083-dd3c4c109345?auto=format&fit=crop&w=900&q=80",
+    "stock": 18,
+    "created_at": "2026-11-12T09:17:03.061Z"
+  }
+}
+]

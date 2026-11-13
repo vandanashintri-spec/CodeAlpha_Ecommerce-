@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name }} | ByteCart{% endblock %}
+
+{% block content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{% url 'home' %}">Shop</a><span aria-hidden="true">/</span><span>{{ product.name }}</span></nav>
+<section class="detail-layout">
+    <div class="detail-image">
+        {% if product.image_url %}
+            <img src="{{ product.image_url }}" alt="{{ product.name }}">
+        {% else %}
+            <span class="image-placeholder" aria-hidden="true">{{ product.name|slice:":1" }}</span>
+        {% endif %}
+    </div>
+    <div class="detail-copy">
+        <p class="eyebrow">{{ product.get_category_display }}</p>
+        <h1>{{ product.name }}</h1>
+        <p class="detail-price">${{ product.price }}</p>
+        <p class="description">{{ product.description|linebreaksbr }}</p>
+        {% if product.stock > 0 %}
+            <p class="stock-note">{{ product.stock }} available</p>
+            <form class="add-form" method="post" action="{% url 'cart_add' product.pk %}">
+                {% csrf_token %}
+                <label for="quantity">Quantity</label>
+                <input id="quantity" name="quantity" type="number" min="1" max="{{ product.stock }}" value="1" required>
+                <input type="hidden" name="next" value="{% url 'cart_detail' %}">
+                <button class="button button-dark" type="submit">Add to cart</button>
+            </form>
+        {% else %}
+            <p class="out-of-stock">Currently out of stock</p>
+        {% endif %}
+        <a class="text-link back-link" href="{% url 'home' %}">&larr; Continue shopping</a>
+    </div>
+</section>
+{% endblock %}
