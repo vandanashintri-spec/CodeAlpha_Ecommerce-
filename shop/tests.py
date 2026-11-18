@@ -1,10 +1,110 @@
 from decimal import Decimal
+from io import StringIO
 
 from django.contrib.auth import get_user_model
 from django.core import mail
+from django.core.management import CommandError, call_command
 from django.test import TestCase
 
+from .management.commands.update_product_prices import (
+	EXPECTED_PRODUCT_COUNT,
+	PRICE_BY_NAME,
+)
 from .models import Order, OrderItem, Product
+
+
+class ProductPriceUpdateCommandTests(TestCase):
+	def setUp(self):
+		self.products = {
+			name: Product.objects.create(
+				name=name,
+				description=f"Description for {name}",
+				price=Decimal("1.23"),
+				category="Other",
+				image_url=f"https://example.com/{index}.jpg",
+				stock=7,
+			)
+			for index, name in enumerate(PRICE_BY_NAME, start=1)
+		}
+
+	def test_command_updates_only_prices_and_is_repeatable(self):
+		self.assertEqual(len(PRICE_BY_NAME), EXPECTED_PRODUCT_COUNT)
+		self.assertEqual(Product.objects.count(), EXPECTED_PRODUCT_COUNT)
+		product_fields_before = list(
+			Product.objects.order_by("pk").values(
+				"id", "name", "description", "category", "image_url", "stock",
+				"created_at",
+			)
+		)
+		user = get_user_model().objects.create_user(
+			username="price-command-customer",
+			email="price-command@example.com",
+			password="test-password",
+		)
+		order = Order.objects.create(
+			user=user,
+			full_name="Price Command Customer",
+			email="price-command@example.com",
+			address="12 Market Street",
+			phone="5550100123",
+			total=Decimal("3.69"),
+		)
+		item = OrderItem.objects.create(
+			order=order,
+			product=self.products["Crossbody Bag"],
+			quantity=3,
+			price=Decimal("1.23"),
+		)
+		order_before = Order.objects.values().get(pk=order.pk)
+		item_before = OrderItem.objects.values().get(pk=item.pk)
+
+		dry_run_output = StringIO()
+		call_command("update_product_prices", "--dry-run", stdout=dry_run_output)
+		self.assertIn("no prices changed", dry_run_output.getvalue())
+		self.assertEqual(
+			set(Product.objects.values_list("price", flat=True)),
+			{Decimal("1.23")},
+		)
+
+		for _ in range(2):
+			output = StringIO()
+			call_command("update_product_prices", stdout=output)
+			self.assertIn("prices for 50 products", output.getvalue())
+
+		self.assertEqual(Product.objects.count(), EXPECTED_PRODUCT_COUNT)
+		self.assertEqual(
+			dict(Product.objects.values_list("name", "price")),
+			{name: Decimal(price) for name, price in PRICE_BY_NAME.items()},
+		)
+		self.assertEqual(
+			list(
+				Product.objects.order_by("pk").values(
+					"id", "name", "description", "category", "image_url", "stock",
+					"created_at",
+				)
+			),
+			product_fields_before,
+		)
+		order.refresh_from_db()
+		item.refresh_from_db()
+		self.assertEqual(Order.objects.values().get(pk=order.pk), order_before)
+		self.assertEqual(OrderItem.objects.values().get(pk=item.pk), item_before)
+
+	def test_command_rejects_unexpected_inventory_without_changing_prices(self):
+		Product.objects.create(
+			name="Unapproved product",
+			description="Not in the approved price list.",
+			price=Decimal("12.34"),
+		)
+
+		with self.assertRaises(CommandError):
+			call_command("update_product_prices", stdout=StringIO())
+
+		self.assertEqual(Product.objects.count(), EXPECTED_PRODUCT_COUNT + 1)
+		self.assertEqual(
+			set(Product.objects.values_list("price", flat=True)),
+			{Decimal("1.23"), Decimal("12.34")},
+		)
 
 
 class StorefrontTests(TestCase):

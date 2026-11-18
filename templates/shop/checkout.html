@@ -23,9 +23,9 @@
         <h2>Order summary</h2>
         <p><span>Payment</span><strong>Cash on delivery</strong></p>
         {% for item in cart %}
-            <p><span>{{ item.product.name }} <small>× {{ item.quantity }}</small></span><strong>${{ item.subtotal }}</strong></p>
+            <p><span>{{ item.product.name }} <small>× {{ item.quantity }}</small></span><strong>₹{{ item.subtotal }}</strong></p>
         {% endfor %}
-        <p class="summary-total"><span>Total</span><strong>${{ cart.total }}</strong></p>
+        <p class="summary-total"><span>Total</span><strong>₹{{ cart.total }}</strong></p>
         <a class="text-link" href="{% url 'cart_detail' %}">Edit cart</a>
     </aside>
 </div>

@@ -15,7 +15,7 @@
     <div class="detail-copy">
         <p class="eyebrow">{{ product.get_category_display }}</p>
         <h1>{{ product.name }}</h1>
-        <p class="detail-price">${{ product.price }}</p>
+        <p class="detail-price">₹{{ product.price }}</p>
         <p class="description">{{ product.description|linebreaksbr }}</p>
         {% if product.stock > 0 %}
             <p class="stock-note">{{ product.stock }} available</p>

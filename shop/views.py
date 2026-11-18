@@ -212,7 +212,7 @@ def checkout(request):
                 message=(
                     f"Thank you for your order, {order.full_name}.\n"
                     f"Order number: {order.pk}\n"
-                    f"Total: ${order.total}\n"
+                    f"Total: ₹{order.total}\n"
                     "Payment method: Cash on delivery."
                 ),
                 from_email=settings.DEFAULT_FROM_EMAIL,

@@ -10,9 +10,9 @@
     <div class="order-summary confirmation-summary">
         <h2>Order details</h2>
         {% for item in order.items.all %}
-            <p><span>{{ item.product.name }} <small>× {{ item.quantity }}</small></span><strong>${{ item.price|floatformat:2 }}</strong></p>
+            <p><span>{{ item.product.name }} <small>× {{ item.quantity }}</small></span><strong>₹{{ item.price|floatformat:2 }}</strong></p>
         {% endfor %}
-        <p class="summary-total"><span>Total</span><strong>${{ order.total }}</strong></p>
+        <p class="summary-total"><span>Total</span><strong>₹{{ order.total }}</strong></p>
         <p><span>Payment</span><strong>{{ order.get_payment_method_display }}</strong></p>
         <p><span>Payment status</span><strong>{{ order.get_payment_status_display }}</strong></p>
         <p><span>Status</span><strong>{{ order.get_status_display }}</strong></p>
